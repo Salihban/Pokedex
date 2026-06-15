@@ -1,7 +1,7 @@
 let allPokemon = [];
 
 async function loadPokemon() {
-    let response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=20&offset=0");
+    let response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0");
     let data = await response.json();
 
     for (let i = 0; i < data.results.length; i++) {
