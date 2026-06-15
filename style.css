@@ -20,17 +20,24 @@ header{
     max-width: 1440px;
     height: 10dvh;
 
+    color: rgb(247, 244, 244);
     background-color: darkblue;
+    font-size: 24px;
 
     .headerline{
         display: flex;
         justify-content: center;
         align-items: center;
 
-        gap: 8px;
+        gap: 24px;
         img{
             width: 32px;
             height: 32px;
+        }
+
+        input{
+            background-color: whitesmoke;
+
         }
     }
 }
@@ -39,6 +46,8 @@ Main{
     width: 100%;
     max-width: 1440px;
     height: calc(100dvh - 10dvh - 8dvh);
+
+    background-color: grey;
 }
 
 footer{
@@ -54,6 +63,8 @@ footer{
         justify-content: center;
         align-items: center;
 
+        gap: 24px;
+        color: whitesmoke;
         img{
             width: 32px;
             height: 32px;
