@@ -12,3 +12,22 @@
     background: initial;
     border: initial;
 }
+
+header{
+    width: 100%;
+    height: 8dvh;
+
+    
+}
+
+Main{
+    width: 100%;
+    max-width: 1440px;
+    height: calc(100dvh - 8dvh - 8dvh);
+}
+
+footer{
+    width: 100%;
+    max-width: 1440px;
+    height: 8dvh;
+}
