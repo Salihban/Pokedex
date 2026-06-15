@@ -21,7 +21,7 @@ header{
     height: 10dvh;
 
     color: rgb(247, 244, 244);
-    background-color: purple;
+    background-color: black;
     font-size: 24px;
 
     .headerline{
@@ -102,7 +102,7 @@ footer{
     max-width: 1440px;
     height: 8dvh;
 
-    background-color: purple;
+    background-color: black;
     .footerline{
         display: flex;
         justify-content: center;
