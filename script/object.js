@@ -1,4 +1,4 @@
-Let pokemonTypeColors = {
+let pokemonTypeColors = {
     normal: "#DADADA",
     fire: "#DE1818",
     water: "#187BDE",
