@@ -18,3 +18,4 @@ let pokemonTypeColors = {
     ghost: "#5A187B",
     steel: "#8A8A8A",
 }
+
