@@ -6,7 +6,7 @@ function getPokemonCardTemplate(pokemon) {
             <h2>${pokemon.name}</h2>
         </div>
         <div class="pokemon-card-img">
-            <img src="${pokemon.sprites.front_default}" alt="">
+            <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
         </div>
         <div class="pokemon-card-type">
             <p>${pokemon.type}</p>
