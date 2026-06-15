@@ -1,10 +1,16 @@
 function getPokemonCardTemplate(pokemon) {
     return /*html*/`
     <div class= "pokemon-card">
-        <div>
+        <div class= "pokemon-card-header">
             <p>#${pokemon.id}</p>
             <h2>${pokemon.name}</h2>
+        </div>
+        <div class="pokemon-card-img">
             <img src="${pokemon.sprites.front_default}" alt="">
         </div>
+        <div class="pokemon-card-type">
+            <p>${pokemon.type}</p>
+        </div>
+    </div>
         `;
     }
