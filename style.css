@@ -48,6 +48,13 @@ Main{
     height: calc(100dvh - 10dvh - 8dvh);
 
     background-color: grey;
+
+    .pokemon-card{
+        width: 100px;
+        height: 200px;
+
+        border: 1px solid black;
+    }
 }
 
 footer{
