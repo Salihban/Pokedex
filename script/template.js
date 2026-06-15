@@ -9,7 +9,7 @@ function getPokemonCardTemplate(pokemon) {
             <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
         </div>
         <div class="pokemon-card-type">
-            <p>${pokemon.type}</p>
+            <p>${pokemon.types[0].type.name}</p>
         </div>
     </div>
         `;
