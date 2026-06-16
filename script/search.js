@@ -1,6 +1,8 @@
-function searchPokemon() {
-    let search = document.getElementById("search-input").value;
-    let filteredPokemon = pokemon.filter(poke => poke.name.includes(search));
+let currentPokemon = [];
 
-    renderPokemon(filteredPokemon);
+function searchPokemon() {
+    let search = document.getElementById("search-input").value.toLowerCase();
+
+    currentPokemon = allPokemon.filter(pokemon => pokemon.name.includes(search));
+    renderPokemon();
 }

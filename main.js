@@ -1,5 +1,6 @@
 let allPokemon = [];
 
+
 async function loadPokemon() {
     let response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=20&offset=0");
     let data = await response.json();
@@ -12,6 +13,7 @@ async function loadPokemon() {
 
         allPokemon.push(pokemonData);
     }
+    currentPokemon = allPokemon;
     renderPokemon();
 }
 
@@ -19,8 +21,8 @@ function renderPokemon() {
 let contentRef = document.getElementById("content");
 contentRef.innerHTML = "";
 
-for (let i = 0; i < allPokemon.length; i++) {
-    contentRef.innerHTML += getPokemonCardTemplate(allPokemon[i]);
+for (let i = 0; i < currentPokemon.length; i++) {
+    contentRef.innerHTML += getPokemonCardTemplate(currentPokemon[i]);
     }
 }
 
