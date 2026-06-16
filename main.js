@@ -1,19 +1,26 @@
 let allPokemon = [];
+let currentPokemon = [];
+let offset = 0;
+const limit = 20;
 
 
 async function loadPokemon() {
-    let response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=20&offset=0");
+    let response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`);
     let data = await response.json();
 
-    for (let i = 0; i < data.results.length; i++) {
+    let pokemonList = data.results;
+
+    for (let i = 0; i < pokemonList.length; i++) {
         let pokemonUrl = data.results[i].url;
 
-        let pokemonResponse = await fetch(pokemonUrl);
+        let pokemonResponse = await fetch(pokemonList[i].url);
         let pokemonData = await pokemonResponse.json();
 
         allPokemon.push(pokemonData);
+        renderNewPokemon(pokemonData);
     }
     currentPokemon = allPokemon;
+    offset += limit;
     renderPokemon();
 }
 
@@ -33,5 +40,10 @@ function renderTypes(types) {
         pokeType += `<p>${types[i].type.name}</p>`
     }
     return pokeType;
+}
+
+function renderNewPokemon(pokemon) {
+    const cardRef = document.getElementById("content");
+    cardRef.innerHTML += getPokemonCardTemplate(pokemon);
 }
 loadPokemon();

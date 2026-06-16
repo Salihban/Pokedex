@@ -1,5 +1,3 @@
-let currentPokemon = [];
-
 function searchPokemon() {
     let search = document.getElementById("search-input").value.toLowerCase();
 
