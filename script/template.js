@@ -1,4 +1,6 @@
 function getPokemonCardTemplate(pokemon) {
+    console.log(pokemon);
+    
     return /*html*/`
     <div class= "pokemon-card">
         <div class= "pokemon-card-header">
@@ -9,7 +11,7 @@ function getPokemonCardTemplate(pokemon) {
             <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
         </div>
         <div class="pokemon-card-type">
-            <p>${pokemon.types[0].type.name}</p>
+            ${renderTypes(pokemon.types)}
         </div>
     </div>
         `;
