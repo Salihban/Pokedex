@@ -107,7 +107,18 @@ Main{
 }
 
 .Loard-more-btn-wrapper{
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 30px;
+    background-color: black;
+
+    button{
+        background-color: rgb(237, 24, 24);
+        border-radius: 10px;
+        padding: 4px;
+    }
 }
 
 footer{
