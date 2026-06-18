@@ -50,8 +50,8 @@ function getPokemonCardTemplate(pokemon) {
         </div>
     </section>
     <div class="btnDialog" style="background-color: ${pokemonTypeColors[pokemon.types[0].type.name]}">
-        <button>L</button>
-        <button>R</button>
+        <button onclick="btn_L(${pokemon.id})">L</button>
+        <button onclick="btn_R(${pokemon.id})">R</button>
     </div>
     </div>
     `

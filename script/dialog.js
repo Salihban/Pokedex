@@ -15,6 +15,22 @@ function  openDialog(id) {
 
 dialogRef.addEventListener("click", function(event) {if (event.target === dialogRef){ closeDialog();}});
 
+function btn_R(id) {
+    if (id >= allPokemon.length) {
+        openDialog(1)
+    } else {
+        openDialog(id + 1);
+    }
+}
+
+function btn_L(id) {
+    if (id <= 1) {
+        openDialog(allPokemon.length);
+    } else {
+        openDialog(id - 1);
+    }
+}
+
 function closeDialog() {
     document.getElementById("dialog").close();
 }
