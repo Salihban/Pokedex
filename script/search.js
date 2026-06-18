@@ -1,12 +1,21 @@
 function searchPokemon() {
     let search = document.getElementById("search-input").value.toLowerCase();
 
+    if (search.length === 0) {
+        currentPokemon = allPokemon;
+        renderPokemon();
+        return;
+    } 
+
     if (search.length < 3) {
-        ("Please enter 3 letters");
-    } else {
-
+        document.getElementById("content").innerHTML =`<p>please enter at least 3 letters</p>`;
     }
+    
+    currentPokemon = allPokemon.filter(pokemon => pokemon.name.toLowerCase().includes(search));
 
-    currentPokemon = allPokemon.filter(pokemon => pokemon.name.includes(search));
+    if (currentPokemon.length === 0) {
+        document.getElementById("content").innerHTML = `<p>No Pokemon found</p>`;
+        return;
+    }
     renderPokemon();
 }
