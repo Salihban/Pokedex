@@ -19,10 +19,12 @@ header{
     width: 100%;
     max-width: 1440px;
     height: 10dvh;
+    margin: auto;
 
     color: rgb(247, 28, 28);
     background-color: black;
     font-size: 24px;
+    gap: 24px;
 
     .headerline{
         display: flex;
@@ -34,10 +36,15 @@ header{
             width: 32px;
             height: 32px;
         }
+    }
+
+    .inputfield{
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         input{
             background-color: whitesmoke;
-
         }
     }
 }
@@ -50,6 +57,7 @@ Main{
     width: 100%;
     max-width: 1440px;
     height: calc(100dvh - 10dvh - 8dvh);
+    margin: auto;
 
     gap: 16px;
     padding: 20px;
@@ -118,6 +126,9 @@ Main{
     align-items: center;
 
     height: 30px;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
     background-color: black;
 
     button{
@@ -201,6 +212,7 @@ footer{
     width: 100%;
     max-width: 1440px;
     height: 8dvh;
+    margin: auto;
 
     background-color: black;
     .footerline{
@@ -214,5 +226,14 @@ footer{
             width: 32px;
             height: 32px;
         }
+    }
+}
+
+
+@media screen and (max-width: 460px){
+    header{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
     }
 }
