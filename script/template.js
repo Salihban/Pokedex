@@ -1,6 +1,4 @@
-function getPokemonCardTemplate(pokemon) {
-    console.log(pokemon);
-    
+function getPokemonCardTemplate(pokemon) { 
     return /*html*/`
     <div onclick="openDialog(${pokemon.id})" class= "pokemon-card">
         <div class= "pokemon-card-header">

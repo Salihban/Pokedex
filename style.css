@@ -214,6 +214,35 @@ dialog::backdrop{
     background-color: black;
 }
 
+.spinner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+
+    .spinner{
+        width: 80px;
+        height: 80px;
+
+        border: 8px solid red;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+}
+
+.d-none{
+    display: none;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 footer{
     display: flex;
     justify-content: center;

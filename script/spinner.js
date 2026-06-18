@@ -1,7 +1,9 @@
-async function loadAndShow() {
-
-    showLoadingSpinner();
-
-    await loadPkms(listStart, listStart + 10)
+function showLoadingSpinner() {
+    console.log("spinner an");
     
+    document.getElementById("loading-spinner").classList.remove("d-none");
+}
+
+function hideLoadingSpinner() {
+    document.getElementById("loading-spinner").classList.add("d-none");
 }

@@ -8,9 +8,9 @@
 
     <script defer src="./script/template.js"></script>
     <script defer src="./script/object.js"></script>
+    <script defer src="./script/spinner.js"></script>
     <script defer src="./main.js"></script>
     <script defer src="./script/search.js"></script>
-    <script defer src="./script/spinner.js"></script>
     <script defer src="./script/dialog.js"></script>
 
     <link rel="stylesheet" href="style.css">
@@ -29,6 +29,9 @@
     <dialog id="dialog" ></dialog>
     <div class="Loard-more-btn-wrapper">
         <button onclick="loadPokemon()">Load More</button>
+    </div>
+    <div id="loading-spinner" class="spinner-container d-none">
+        <div class="spinner"></div>
     </div>
     <footer>
         <div class="footerline">
