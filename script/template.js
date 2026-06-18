@@ -19,34 +19,40 @@ function getPokemonCardTemplate(pokemon) {
 
     function getPokemonDialogTemplate(pokemon) {
     return /*html*/`
-    <section>   
-        <div>
+    <div class="dialogWrapper" style="background-color: ${pokemonTypeColors[pokemon.types[0].type.name]}">
+    <section class="headerDialog" style="background-color: ${pokemonTypeColors[pokemon.types[0].type.name]}">   
+        <div class="headerId">
             <h2>${pokemon.name}</h2>
             <p>#${pokemon.id}</p>
         </div>
-        <div>
+        <div class="dialogSprites">
             <p>${renderTypes(pokemon.types)}</p>
             <img src="${pokemon.sprites.other.home.front_default}" alt="${pokemon.name}">
         </div>
     </section>
-    <section>
-        <div><p>Base Stats</p></div>
-        <div class="HP">
+    <section class="mainDialog" style="background-color: ${pokemonTypeColors[pokemon.types[0].type.name]}">
+        <div class="baseStats"><p>Base Stats</p></div>
+        <div class="stats">
             <p>HP</p>
             <p>${pokemon.stats[0].base_stat}</p>
         </div>
-        <div class="Attack">
+        <div class="stats">
             <p>attack</p>
             <p>${pokemon.stats[1].base_stat}</p>
         </div>
-        <div class="Defense">
+        <div class="stats">
             <p>Defense</p>
             <p>${pokemon.stats[2].base_stat}</p>
         </div>
-        <div>
+        <div class="stats">
             <p>Speed</p>
             <p>${pokemon.stats[5].base_stat}</p>
         </div>
     </section>
+    <div class="btnDialog" style="background-color: ${pokemonTypeColors[pokemon.types[0].type.name]}">
+        <button>L</button>
+        <button>R</button>
+    </div>
+    </div>
     `
     }
