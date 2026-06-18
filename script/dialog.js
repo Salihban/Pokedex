@@ -10,7 +10,6 @@ function  openDialog(id) {
     }
 
     dialogRef.innerHTML = getPokemonDialogTemplate(pokemon);
-
     dialogRef.showModal();
 }
 

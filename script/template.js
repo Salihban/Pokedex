@@ -33,15 +33,19 @@ function getPokemonCardTemplate(pokemon) {
         <div><p>Base Stats</p></div>
         <div class="HP">
             <p>HP</p>
-            <p></p>
+            <p>${pokemon.stats[0].base_stat}</p>
         </div>
-        <div class="attack">
+        <div class="Attack">
             <p>attack</p>
-            <p></p>
+            <p>${pokemon.stats[1].base_stat}</p>
+        </div>
+        <div class="Defense">
+            <p>Defense</p>
+            <p>${pokemon.stats[2].base_stat}</p>
         </div>
         <div>
-            <p>Defense</p>
-            <p></p>
+            <p>Speed</p>
+            <p>${pokemon.stats[5].base_stat}</p>
         </div>
     </section>
     `
