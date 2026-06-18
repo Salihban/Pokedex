@@ -214,19 +214,20 @@ dialog::backdrop{
     background-color: black;
 }
 
-.spinner-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
+.loading-spinner{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    max-width: 1440px;
+    background: white;
+    z-index: 1;
 
-    .spinner{
-        width: 80px;
-        height: 80px;
-
-        border: 8px solid red;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
+    p{
+    color: black;
+    font-size: 24px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
     }
 }
 
