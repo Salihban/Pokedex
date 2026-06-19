@@ -230,7 +230,7 @@ dialog::backdrop{
     border: 8px solid #1e3868;
     border-top: 8px solid #ef5350;
     border-radius: 50%;
-    animation: spin 1s linear infinite;
+    animation: spin 1.2s linear infinite;
 }
 
 .d-none{
