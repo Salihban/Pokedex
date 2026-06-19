@@ -5,6 +5,7 @@ const limit = 20;
 
 
 async function loadPokemon() {
+    showLoadingSpinner();
     let response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`);
     let data = await response.json();
 
@@ -22,6 +23,7 @@ async function loadPokemon() {
     currentPokemon = allPokemon;
     offset += limit;
     renderPokemon();
+    hideLoadingSpinner();
 }
 
 function renderPokemon() {
