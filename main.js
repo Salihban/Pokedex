@@ -49,4 +49,10 @@ function renderNewPokemon(pokemon) {
     cardRef.innerHTML += getPokemonCardTemplate(pokemon);
 }
 
+function resetPokemon() {
+    currentPokemon = allPokemon;
+    document.getElementById("search-input").value ="";
+    renderPokemon();
+}
+
 loadPokemon();

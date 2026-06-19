@@ -38,6 +38,10 @@ header{
             width: 32px;
             height: 32px;
         }
+
+        h1{
+            cursor: pointer;
+        }
     }
 
     .inputfield{
