@@ -2,35 +2,31 @@ let dialogRef = document.getElementById("dialog");
 
 function  openDialog(id) {
     let pokemon;
-
-    for (let i = 0; i < allPokemon.length; i++) {
-        if (allPokemon[i].id === id) {
-            pokemon = allPokemon[i];
+    for (let i = 0; i < currentPokemon.length; i++) {
+        if (currentPokemon[i].id === id) {
+            pokemon = currentPokemon[i];
         }
     }
-
     dialogRef.innerHTML = getPokemonDialogTemplate(pokemon);
     dialogRef.showModal();
 }
-
 dialogRef.addEventListener("click", function(event) {if (event.target === dialogRef){ closeDialog();}});
-
 function btn_R(id) {
-    if (id >= allPokemon.length) {
-        openDialog(1)
-    } else {
-        openDialog(id + 1);
+    let index = currentPokemon.findIndex(pokemon => pokemon.id == id);
+    index++;
+    if (index >= currentPokemon.length) {
+    index = 0;
     }
+    openDialog(currentPokemon[index].id);
 }
-
 function btn_L(id) {
-    if (id <= 1) {
-        openDialog(allPokemon.length);
-    } else {
-        openDialog(id - 1);
+    let index = currentPokemon.findIndex(pokemon => pokemon.id == id);
+    index--;
+    if (index < 0) {
+    index = currentPokemon.length -1;
     }
+    openDialog(currentPokemon[index].id);
 }
-
 function closeDialog() {
     document.getElementById("dialog").close();
 }

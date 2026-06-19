@@ -13,13 +13,15 @@
     border: initial;
 }
 
+body{
+    overflow-y: hidden;
+}
+
 header{
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 1440px;
     height: 10dvh;
-    margin: auto;
 
     color: rgb(247, 28, 28);
     background-color: black;
@@ -133,8 +135,6 @@ Main{
 
     height: 30px;
     width: 100%;
-    max-width: 1440px;
-    margin: auto;
     background-color: black;
 
     button{
@@ -250,9 +250,7 @@ footer{
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 1440px;
     height: 8dvh;
-    margin: auto;
 
     background-color: black;
     .footerline{
