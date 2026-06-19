@@ -22,6 +22,7 @@ function getPokemonCardTemplate(pokemon) {
         <div class="headerId">
             <h2>${pokemon.name}</h2>
             <p>#${pokemon.id}</p>
+            <button data-id="close-dialog-button" onclick="closeDialog()">X</button>
         </div>
         <div class="dialogSprites">
             <p>${renderTypes(pokemon.types)}</p>
