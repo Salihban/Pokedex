@@ -48,4 +48,5 @@ function renderNewPokemon(pokemon) {
     const cardRef = document.getElementById("content");
     cardRef.innerHTML += getPokemonCardTemplate(pokemon);
 }
+
 loadPokemon();
