@@ -1,12 +1,12 @@
 function getPokemonCardTemplate(pokemon) { 
     return /*html*/`
-    <div onclick="openDialog(${pokemon.id})" class= "pokemon-card">
+    <div data-id="card" onclick="openDialog(${pokemon.id})" class= "pokemon-card">
         <div class= "pokemon-card-header">
             <p>#${pokemon.id}</p>
             <h2>${pokemon.name}</h2>
         </div>
         <div class="pokemon-card-img" style="background-color: ${pokemonTypeColors[pokemon.types[0].type.name]}">
-            <img src="${pokemon.sprites.other.home.front_default}" alt="${pokemon.name}">
+            <img data-id="card-image" src="${pokemon.sprites.other.home.front_default}" alt="${pokemon.name}">
         </div>
         <div class="pokemon-card-type">
             ${renderTypes(pokemon.types)}
@@ -18,14 +18,14 @@ function getPokemonCardTemplate(pokemon) {
     function getPokemonDialogTemplate(pokemon) {
     return /*html*/`
     <div class="dialogWrapper" style="background-color: ${pokemonTypeColors[pokemon.types[0].type.name]}">
-    <section class="headerDialog" style="background-color: ${pokemonTypeColors[pokemon.types[0].type.name]}">   
+    <section data-id="overlay-pokemon-name" class="headerDialog" style="background-color: ${pokemonTypeColors[pokemon.types[0].type.name]}">   
         <div class="headerId">
             <h2>${pokemon.name}</h2>
             <p>#${pokemon.id}</p>
         </div>
         <div class="dialogSprites">
             <p>${renderTypes(pokemon.types)}</p>
-            <img src="${pokemon.sprites.other.home.front_default}" alt="${pokemon.name}">
+            <img data-id="dialog-images" src="${pokemon.sprites.other.home.front_default}" alt="${pokemon.name}">
         </div>
     </section>
     <section class="mainDialog" style="background-color: ${pokemonTypeColors[pokemon.types[0].type.name]}">
@@ -48,8 +48,8 @@ function getPokemonCardTemplate(pokemon) {
         </div>
     </section>
     <div class="btnDialog" style="background-color: ${pokemonTypeColors[pokemon.types[0].type.name]}">
-        <button onclick="btn_L(${pokemon.id})">L</button>
-        <button onclick="btn_R(${pokemon.id})">R</button>
+        <button data-id="prev-button" onclick="btn_L(${pokemon.id})">L</button>
+        <button data-id="next-button" onclick="btn_R(${pokemon.id})">R</button>
     </div>
     </div>
     `

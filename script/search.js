@@ -13,7 +13,7 @@ function searchPokemon() {
     
     currentPokemon = allPokemon.filter(pokemon => pokemon.name.toLowerCase().includes(search));
 
-    if (currentPokemon.length === 0) {
+    if data-id="not-found" (currentPokemon.length === 0) {
         document.getElementById("content").innerHTML = `<p>No Pokemon found</p>`;
         return;
     }

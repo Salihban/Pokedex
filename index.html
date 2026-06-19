@@ -23,13 +23,13 @@
             <h1>Pokedex</h1>
         </div>
         <div class="inputfield">
-            <input id="search-input" oninput="searchPokemon()" type="text" placeholder="Search Pokemon . . .">
+            <input data-id="search-inout" id="search-input" oninput="searchPokemon()" type="text" placeholder="Search Pokemon . . .">
             </div>
     </header>
-    <main id="content"></main>
-    <dialog id="dialog" ></dialog>
+    <main data-id="content" id="content"></main>
+    <dialog data-id="dialog" id="dialog" ></dialog>
     <div class="Loard-more-btn-wrapper">
-        <button onclick="loadPokemon()">Load More</button>
+        <button data-input="load-more-button" onclick="loadPokemon()">Load More</button>
     </div>
     <div id="loading-spinner" class="spinner-container d-none">
         <div class="spinner"></div>
